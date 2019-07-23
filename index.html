@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Percentage</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	 <script src="js/script.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+</head>
+<body>
+    
+
+    <div class="calculate" id="gradd">
+    	<h2>Calculate Percentage</h2>
+    </div>
+	<div class="cal" id="dddd">
+		 <form class="form-group" action="#">
+    <label for="mev">Mean Value</label>
+    <input type="text" class="form-control" id="mev">
+
+    <label for="pwd">Percentage</label>
+    <input type="text" class="form-control" id="pwd">
+
+    <label for="opv">Output Value</label>
+    <input type="text" class="form-control" id='opv'><br>
+    
+   
+  </form>
+	</div>
+
+
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+        <script src = "https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script>
+
+    $(document).ready(function(){
+
+        $("#mev,#pwd").keyup(function(){
+
+            
+        $("#opv").val((($("#mev").val()*$("#pwd").val()))/100);
+
+            //$("#opv").val((($("#mev").val()*$("#pwd").val())/100));
+
+            //alert("Percentage Value is "+(($("#mev").val()*$("#pwd").val())/100));
+            //alert(($("#txt1").val()*$("#txt2").val())/100);
+        });
+
+    });
+
+    $(document).ready(function(){
+
+        $("#gradd h2").draggable({
+            cursor:'pointer',
+        });
+
+    });
+	$(document).ready(function(){
+                $("#dddd").draggable({
+                    cursor:'move',
+                });
+            });
+    </script>
+
+
+
+
+</body>
+</html>
